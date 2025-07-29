@@ -1,5 +1,5 @@
 # Mesh-Network-Creation
-Creating a home mesh network and configuring security
+This project documents the creation of a segmented home mesh network using TP-Link Deco units. It focuses on VLAN-based traffic isolation, basic firewall rules, and packet-level verification using Wireshark.
 
 📡 Mesh Network Config <br>
 A segmented, three-node mesh network built for secure home connectivity and practical threat modeling.
@@ -13,11 +13,11 @@ This project documents the configuration and architecture of a home mesh network
 - Office Node: Mesh endpoint for workstations and project lab
 
 🧱 VLAN Architecture <br>
-The network is divided into three VLANs for traffic isolation and tailored access control:
-| VLAN ID | Purpose | Devices | 
-| 10 | Workstations VLAN | Laptops, desktops, mobile phones | 
-| 20 | IoT VLAN | Smart bulbs, plugs, appliances | 
-| 30 | Guest VLAN | Visitors’ phones and laptops | 
+The network is divided into three VLANs for traffic isolation and tailored access control: <br>
+| VLAN ID | Purpose | Devices | <br>
+| 10 | Workstations VLAN | Laptops, desktops, mobile phones | <br>
+| 20 | IoT VLAN | Smart bulbs, plugs, appliances | <br>
+| 30 | Guest VLAN | Visitors’ phones and laptops | <br>
 
 - VLAN10 is prioritized for trusted, productivity-related devices.
 - VLAN20 contains all IoT endpoints and is isolated to prevent lateral movement.
@@ -37,6 +37,7 @@ Configuration was handled entirely via the Deco mobile application:
 📊 Monitoring & Observations <br>
 Basic connection tracking and new-device alerts are configured within the Deco app. While Deco’s capabilities are limited, additional network inspection and anomaly detection are performed via auxiliary tools such as:
 - Wireshark (for packet analysis during test sessions)
+- Monitored live network traffic using tcpdump on the eth0 interface with verbose output to observe IP-level communication.
 - Pi-hole integration (not yet implemented) is being considered to enable DNS query logging and potential ad/malware domain blocking.
 
 🌟 Limitations & Future Improvements <br>
