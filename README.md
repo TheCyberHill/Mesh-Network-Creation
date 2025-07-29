@@ -42,6 +42,7 @@ Basic connection tracking and new-device alerts are configured within the Deco a
 
 🌟 Limitations & Future Improvements <br>
 While Deco provides reliable mesh coverage, it lacks advanced firewall rule creation and VLAN management. Future plans may include:
-- Integrating pfSense or Firewalla for advanced traffic control
-- Expanding network visibility with Netdata or Grafana dashboards
-- Setting up device-level intrusion alerts for IoT devices
+- Integrate Pi-hole for DNS query logging and ad/malware domain blocking
+- Explore ELK Stack or Splunk for log visualization and anomaly detection
+- Expand VLAN segmentation to include more granular device groups
+- Automate packet captures with tcpdump and Python for threat-hunting workflows
